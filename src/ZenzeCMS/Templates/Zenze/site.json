@@ -655,6 +655,11 @@
             "Name": "TrustedParagraph",
             "Category": "Clients",
             "Description": "Default truseted by our clients with paragraph section"
+        },
+        {
+            "Name": "Default",
+            "Category": "Misc",
+            "Description": "Default misc section"
         }
 
     ],
