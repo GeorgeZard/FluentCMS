@@ -1,0 +1,810 @@
+{
+    "Name": "Zenze.FluentCMS",
+    "Description": "Zenze.FluentCMS default site template including some samples",
+    "Layout": "DefaultLayout",
+    "EditLayout": "EditLayout",
+    "DetailLayout": "SingleLayout",
+    "AdminRoles": [ "Administrators" ],
+    "ContributorRoles": [ "Contributors" ],
+    "Settings": {
+        "MetaTitle": "Zenze.CMS",
+        "MetaDescription": "Zenze.CMS is an Blazor CMS designed to streamline content management",
+        "GoogleTagsId": "",
+        "Head": "",
+        "Index": "true",
+        "Follow": "true",
+        "OgType": "website",
+        "RobotsTxt": "User-agent: *\nDisallow: /admin"
+    },
+    "Roles": [
+        {
+            "Name": "Administrators",
+            "Description": "Default administrators role with full access to the site",
+            "Type": 1
+        },
+        {
+            "Name": "Authenticated Users",
+            "Description": "Default authenticated users role",
+            "Type": 2
+        },
+        {
+            "Name": "Guests",
+            "Description": "Default unauthenticated users role (not logged in users)",
+            "Type": 3
+        },
+        {
+            "Name": "All Users",
+            "Description": "Default all users (authenticated or unauthenticated users)",
+            "Type": 4
+        },
+        {
+            "Name": "Contributors",
+            "Description": "Contributor users to manage pages, plugins, etc.",
+            "Type": 0
+        }
+    ],
+    "Layouts": [
+        {
+            "Name": "DefaultLayout"
+        },
+        {
+            "Name": "AdminLayout"
+        },
+        {
+            "Name": "AuthLayout"
+        },
+        {
+            "Name": "EditLayout"
+        },
+        {
+            "Name": "SingleLayout"
+        }
+    ],
+    "Pages": [
+        {
+            "Title": "Home",
+            "Path": "/",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            },
+            "Plugins": [
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "Type": "TextHTMLContent",
+                    "Content": [
+                        {
+                            "Content": "<div class=\"max-w-screen-xl px-4 py-8 mx-auto lg:py-16\">\n    <div class=\"grid items-center gap-8 mb-8 lg:mb-16 lg:gap-12 lg:grid-cols-12\">\n        <div class=\"col-span-12 sm:mb-6 text-center lg:mb-0\">\n            <a href=\"https://github.com/fluentcms/FluentCMS\"\n                class=\"inline-flex items-center justify-between px-1 py-1 pr-4 mb-6 text-sm text-gray-700 bg-gray-50 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700\"\n                role=\"alert\">\n                <span class=\"px-3 py-1 mr-3 text-xs text-white rounded-full bg-blue-600\" data-inline-editable>New</span> <span\n                    class=\"text-sm font-medium\" data-inline-editable>See our latest progress</span>\n                <svg class=\"w-5 h-5 ml-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\">\n                    <path fill-rule=\"evenodd\"\n                        d=\"M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z\"\n                        clip-rule=\"evenodd\"></path>\n                </svg>\n            </a>\n            <h1\n                class=\"text-center my-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl xl:text-4xl dark:text-white\" data-inline-editable>\n                Welcome to FluentCMS\n                <div class=\"mt-6\" data-inline-editable>\n                    AI Driven ASP.NET Core Blazor Content Management System (CMS)\n                </div>\n            </h1>\n            <p\n                class=\"text-center mx-auto max-w-xl mx-auto mb-6 font-light text-gray-500 xl:mb-8 md:text-lg xl:text-xl dark:text-gray-400\" data-inline-editable>\n                Building and managing content has never been easier. Experience the power of AI with FluentCMS.\n            </p>\n            <div class=\"flex justify-center gap-4\">\n                <img src=\"https://img.shields.io/github/issues/fluentcms/FluentCMS\" alt=\"Issue count\">\n                <img class=\"hidden\" src=\"https://img.shields.io/nuget/v/FluentCMS\" alt=\"Version\">\n                <img src=\"https://img.shields.io/badge/version-1.2.3-blue\" alt=\"Version\">\n            </div>\n            <div class=\"pt-12\">\n                <a href=\"/admin\"\n                    class=\"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800\" data-inline-editable>\n                    Open Administration\n                </a>\n            </div>\n        </div>\n    </div>\n</div>"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Blogs",
+            "Path": "/blogs",
+            "Layout": "SingleLayout",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            },
+            "Plugins": [
+
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "Type": "TextHTMLContent",
+                    "Content": [
+                        {
+                            "Content": "<section><h1>Blog</h1></section>"
+                        }
+                    ]
+                },
+                {
+                    "Definition": "Content List",
+                    "Section": "Main",
+                    "Cols": 12,
+                    "Settings": {
+                        "Template": "<section class=\"blog_section section_space_lg\"> <div class=\"container\"> <div class=\"blog_grouped row\"> {{ for item in Items }} <div class=\"col col-lg-4 col-md-6\"> <div class=\"blog_item\"> <a class=\"item_image\" href=\"/blogs/detail/{{ item.Id }}\" data-cursor-text=\"VIEW\"> {{ if item.FeaturedImage }} <img src=\"{{ item.FeaturedImage }}\" alt=\"{{ item.Title }}\"> {{ else }} <img src=\"/files/images/blogs/blog_image_1.jpg\" alt=\"{{ item.Title }}\"> {{ end }} </a> <div class=\"item_content\"> <div class=\"flex_wrap\"> <ul class=\"category_list unordered_list\"> {{ for tag in item.Tags }} <li><a href=\"#!\">{{ tag }}</a></li> {{ end }} </ul> <span class=\"post_date\">{{ item.PublishedAt }}</span> </div> <h3 class=\"item_title\"> <a href=\"/blogs/detail/{{ item.Id }}\"> {{ item.Title }} </a> </h3> <a class=\"btn-link\" href=\"/blogs/detail/{{ item.Id }}\"> <span class=\"btn_text\">Read More</span> <span class=\"btn_icon\"> <img src=\"/files/images/icons/icon_arrow_down_right.svg\" alt=\"Paradox - Icon Arrow Down Right\"> <img src=\"/files/images/icons/icon_arrow_down_right_primary.svg\" alt=\"Paradox - Icon Arrow Down Right\"> </span> </a> </div> </div> </div> {{ end }} </div> </div>",
+                        "ContentTypeSlug": "blog"
+                    }
+                }
+            ],
+            "Children": [
+                {
+                    "Title": "Blog Detail",
+                    "Path": "/detail",
+                    "Layout": "SingleLayout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "true",
+                        "Follow": "true"
+                    },
+                    "Plugins": [
+                        {
+                            "Definition": "TextHTML Plugin",
+                            "Section": "Main",
+                            "Cols": 12,
+                            "Content": [
+                                {
+                                    "Content": "<section><h1>Blog Detail</h1></section>"
+                                }
+                            ]
+                        },
+                        {
+                            "Definition": "Content Detail",
+                            "Section": "Main",
+                            "Cols": 12,
+                            "Settings": {
+                                "Template": "<section class=\"details_section blog_details section_space_lg\">\n  <div class=\"container\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col col-lg-12\">\n        <div class=\"details_image\">\n          <img src=\"{{ Item.FeaturedImage }}\" alt=\"{{ Item.Title }}\">\n        </div>\n\n        <div class=\"details_content\">\n          <div class=\"blog_post_meta\">\n            <ul class=\"category_list unordered_list\">\n              <li><a href=\"#!\">UI/UX</a></li>\n            </ul>\n            <span class=\"post_date\">{{ Item.PublishedAt }}</span>\n          </div>\n          <h2 class=\"details_item_title\">\n            {{ Item.Title }}\n          </h2>\n          <p>\n           {{ Item.Content }}\n          </p>\n        \n          <div class=\"social_actions\">\n            <ul class=\"tags_list unordered_list\">\n {{ for tag in Item.Tags }}\n                 <li>{{tag}}</li>\n                </span>\n            {{ end }}\n            </ul>\n            \n          </div>\n        </div>\n\n        \n      </div>\n    </div>\n  </div>\n</section>",
+                                "ContentTypeSlug": "blog"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Admin",
+            "Path": "/admin",
+            "Layout": "AdminLayout",
+            "EditLayout": "AdminLayout",
+            "AdminRoles": [ "Administrators" ],
+            "ViewRoles": [ "Administrators" ],
+            "Locked": true,
+            "Plugins": [],
+            "Children": [
+                {
+                    "Title": "Content Type Builder",
+                    "Path": "/content-types",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "ContentType Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Users",
+                    "Path": "/users",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "User Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "File Management",
+                    "Path": "/files",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "File Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Api Tokens",
+                    "Path": "/api-tokens",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Api Token Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Roles",
+                    "Path": "/roles",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Role Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Sites",
+                    "Path": "/sites",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Site Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Plugins",
+                    "Path": "/plugins",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Plugin Definition Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Pages",
+                    "Path": "/pages",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Page Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Blocks",
+                    "Path": "/blocks",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Block Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "Layouts",
+                    "Path": "/layouts",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Layout Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                },
+                {
+                    "Title": "GlobalSettings",
+                    "Path": "/globalsettings",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "AdminRoles": [ "Administrators" ],
+                    "ViewRoles": [ "Administrators" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Global Settings Management",
+                            "Section": "Main",
+                            "Locked": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Authentication",
+            "Path": "/auth",
+            "Children": [
+                {
+                    "Title": "Login",
+                    "Path": "/login",
+                    "Locked": true,
+                    "Layout": "AuthLayout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Plugins": [
+                        {
+                            "Definition": "Login",
+                            "Section": "Main"
+                        }
+                    ]
+                },
+                {
+                    "Title": "Logout",
+                    "Path": "/logout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Logout",
+                            "Section": "Main"
+                        }
+                    ]
+                },
+                {
+                    "Title": "Register",
+                    "Path": "/register",
+                    "Locked": true,
+                    "Layout": "AuthLayout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Plugins": [
+                        {
+                            "Definition": "Register",
+                            "Section": "Main"
+                        }
+                    ]
+                },
+                {
+                    "Title": "Reset Password",
+                    "Path": "/reset-password",
+                    "Locked": true,
+                    "Layout": "AuthLayout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Plugins": [
+                        {
+                            "Definition": "Reset Password",
+                            "Section": "Main"
+                        }
+                    ]
+                },
+                {
+                    "Title": "Forgot Password",
+                    "Path": "/forgot-password",
+                    "Locked": true,
+                    "Layout": "AuthLayout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Plugins": [
+                        {
+                            "Definition": "Forgot Password",
+                            "Section": "Main"
+                        }
+                    ]
+                },
+                {
+                    "Title": "Profile",
+                    "Path": "/profile",
+                    "Layout": "AdminLayout",
+                    "EditLayout": "AdminLayout",
+                    "ViewRoles": [ "Authenticated Users" ],
+                    "Settings": {
+                        "Index": "false",
+                        "Follow": "false"
+                    },
+                    "Locked": true,
+                    "Plugins": [
+                        {
+                            "Definition": "Profile",
+                            "Section": "Main"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "Blocks": [
+        {
+            "Name": "Default",
+            "Category": "Hero",
+            "Description": "Default Hero for business companies"
+        },
+        {
+            "Name": "Default",
+            "Category": "Header",
+            "Description": "Default Header 1"
+        },
+        {
+            "Name": "AboutMe",
+            "Category": "About",
+            "Description": "About me for personal CV"
+        },
+        {
+            "Name": "AboutMe_2",
+            "Category": "About",
+            "Description": "About me 2 for personal CV"
+        },
+        {
+            "Name": "Experience",
+            "Category": "About",
+            "Description": "Experience CV"
+        },
+        {
+            "Name": "Experience_resume",
+            "Category": "About",
+            "Description": "Experience with button download resume"
+        },
+        {
+            "Name": "Reasons_why",
+            "Category": "About",
+            "Description": "Write some reasons why customer will prefere your services"
+        },
+        {
+            "Name": "Solutions",
+            "Category": "About",
+            "Description": "Write your given solutions"
+        },
+        {
+            "Name": "Solutions_with_video",
+            "Category": "About",
+            "Description": "Write your given solutions with video"
+        },
+        {
+            "Name": "Team",
+            "Category": "About",
+            "Description": "Show your team and your completed projects"
+        },
+        {
+            "Name": "What_makes_us_diffent",
+            "Category": "About",
+            "Description": "Write what makes you different"
+        },
+        {
+            "Name": "What_makes_us_diffent_2",
+            "Category": "About",
+            "Description": "Write what makes you different 2"
+        },
+        {
+            "Name": "Who_are_we",
+            "Category": "About",
+            "Description": "Write who are you with simple words"
+        },
+        {
+            "Name": "Who_are_we_bullets",
+            "Category": "About",
+            "Description": "Write who are you with bullets"
+        },
+        {
+            "Name": "Why_choose_us",
+            "Category": "About",
+            "Description": "Write here why customer choose you"
+        },
+        {
+            "Name": "Default",
+            "Category": "App",
+            "Description": "Showcase your application"
+        },
+        {
+            "Name": "AvailableOn",
+            "Category": "App",
+            "Description": "Showcase your application 2"
+        },
+        {
+            "Name": "Default",
+            "Category": "Join",
+            "Description": "Prefooter Join us section"
+        },
+        {
+            "Name": "JoinCommunity",
+            "Category": "Join",
+            "Description": "Prefooter Join us section"
+        },
+        {
+            "Name": "JoinProject",
+            "Category": "Join",
+            "Description": "Prefooter Join us section"
+        },
+        {
+            "Name": "JoinTrust",
+            "Category": "Join",
+            "Description": "Prefooter Join us section"
+        },
+        {
+            "Name": "JoinUs",
+            "Category": "Join",
+            "Description": "Prefooter Join us section"
+        },
+        {
+            "Name": "Default",
+            "Category": "Facts",
+            "Description": "Company Fact 1"
+        },
+        {
+            "Name": "Fact2",
+            "Category": "Facts",
+            "Description": "Company Fact 2"
+        },
+        {
+            "Name": "Fact3",
+            "Category": "Facts",
+            "Description": "Company Fact 3"
+        },
+        {
+            "Name": "Fact4",
+            "Category": "Facts",
+            "Description": "Company Fact 4"
+        },
+        {
+            "Name": "Fact5",
+            "Category": "Facts",
+            "Description": "Company Fact 5"
+        },
+        {
+            "Name": "Fact6",
+            "Category": "Facts",
+            "Description": "Company Fact 6"
+        },
+        {
+            "Name": "Fact7",
+            "Category": "Facts",
+            "Description": "Company Fact 7"
+        },
+        {
+            "Name": "Fact8",
+            "Category": "Facts",
+            "Description": "Company Fact 8"
+        },
+        {
+            "Name": "Default",
+            "Category": "Clients",
+            "Description": "Default our client section"
+        },
+        {
+            "Name": "Trusted",
+            "Category": "Clients",
+            "Description": "Default truseted by our clients section"
+        },
+        {
+            "Name": "TrustedParagraph",
+            "Category": "Clients",
+            "Description": "Default truseted by our clients with paragraph section"
+        }
+
+    ],
+    "ContentTypes": [
+        {
+            "Slug": "blog",
+            "Title": "Blog Post",
+            "Description": "Blog post content type",
+            "Fields": [
+                {
+                    "Name": "Title",
+                    "Description": "Blog post title",
+                    "Type": "string",
+                    "Required": true,
+                    "Label": "Title",
+                    "Settings": {
+                        "Placeholder": "Enter post title",
+                        "DataTableColumnOrder": 1,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "StringFieldDataTableView",
+                        "FormViewOrder": 1,
+                        "FormColWidth": 6,
+                        "FormViewComponent": "StringFieldFormText"
+                    }
+                },
+                {
+                    "Name": "Content",
+                    "Type": "string",
+                    "Required": true,
+                    "Description": "Blog post content",
+                    "Label": "Content",
+                    "Settings": {
+                        "Placeholder": "Enter post content",
+                        "DataTableVisible": false,
+                        "DataTableViewComponent": "StringFieldDataTableView",
+                        "FormViewOrder": 4,
+                        "FormColWidth": 12,
+                        "FormViewComponent": "StringFieldFormRichText"
+                    }
+                },
+                {
+                    "Name": "FeaturedImage",
+                    "Type": "single-file",
+                    "Label": "Featured Image",
+                    "Description": "Blog post main image",
+                    "Required": false,
+                    "Settings": {
+                        "Placeholder": "Choose post main image",
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "SingleFileFieldDataTableFile",
+                        "FormViewOrder": 4,
+                        "FormColWidth": 12,
+                        "FormViewComponent": "SingleFileFieldFormFilePicker"
+                    }
+                },
+                {
+                    "Name": "Slug",
+                    "Type": "string",
+                    "Required": true,
+                    "Unique": true,
+                    "Description": "Url slug of the post",
+                    "Label": "Slug",
+                    "Settings": {
+                        "Placeholder": "Enter url slug of the post",
+                        "DataTableColumnOrder": 2,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "StringFieldDataTableView",
+                        "FormViewOrder": 2,
+                        "FormColWidth": 6,
+                        "FormViewComponent": "StringFieldFormText",
+                        "Pattern": "[a-zA-Z0-9-]"
+                    }
+                },
+                {
+                    "Name": "Order",
+                    "Type": "number",
+                    "Required": true,
+                    "Description": "Blog post view order",
+                    "Label": "View Order",
+                    "Settings": {
+                        "Placeholder": "Enter view order of the post",
+                        "DataTableColumnOrder": 2,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "NumberFieldDataTableView",
+                        "FormViewOrder": 8,
+                        "FormColWidth": 6,
+                        "FormViewComponent": "NumberFieldFormInput"
+                    }
+                },
+                {
+                    "Name": "Status",
+                    "Type": "single-select",
+                    "Required": true,
+                    "Description": "status of the blog post",
+                    "Label": "Status",
+                    "Settings": {
+                        "Placeholder": "Choose status of post",
+                        "DataTableColumnOrder": 4,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "SelectFieldDataTableBadge",
+                        "FormViewOrder": 5,
+                        "FormColWidth": 12,
+                        "FormViewComponent": "SelectFieldFormAutocomplete",
+                        "DefaultValue": "Draft",
+                        "Options": "Draft\nIn Review\nPublished\nRejected\nArchived"
+                    }
+                },
+                {
+                    "Name": "Tags",
+                    "Type": "multi-select",
+                    "Description": "Tags of the blog post",
+                    "Label": "Tags",
+                    "Settings": {
+                        "Placeholder": "Choose tags of the post",
+                        "DataTableColumnOrder": 4,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "MultiSelectFieldDataTableBadges",
+                        "FormViewOrder": 6,
+                        "FormColWidth": 12,
+                        "FormViewComponent": "MultiSelectFieldFormAutocomplete",
+                        "Options": "C#\nHtml\nCss\nJavascript\nBlazor\nAsp.net\nOther\nWeb Development\nResponsive Design"
+                    }
+                },
+                {
+                    "Name": "PublishedAt",
+                    "Type": "datetime",
+                    "Description": "Publish date of this post",
+                    "Label": "Published At",
+                    "Settings": {
+                        "Placeholder": "Choose post publish date",
+                        "DataTableColumnOrder": 4,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "DateFieldDataTableView",
+                        "FormViewOrder": 7,
+                        "FormColWidth": 6,
+                        "FormViewComponent": "DateFieldFormDate"
+                    }
+                }
+            ],
+            "Contents": [
+                {
+                    "Title": "Introduction to Zenze Blog",
+                    "Content": "Here you can write your article content",
+                    "Slug": "introduction-to-zenze",
+                    "Tags": [ "zenze" ],
+                    "Status": "Published",
+                    "PublishedAt": "2024-11-26T15:04:05.641Z",
+                    "Order": 1
+                }
+            ]
+        }
+    ]
+}

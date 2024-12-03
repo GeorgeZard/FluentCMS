@@ -101,6 +101,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCMS.Repositories.EFCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCMS.Repositories.EFCore.Sqlite", "Backend\Repositories\FluentCMS.Repositories.EFCore.Sqlite\FluentCMS.Repositories.EFCore.Sqlite.csproj", "{1914FAAB-9B86-4B76-90CA-E16D3C8984FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenzeCMS", "ZenzeCMS\ZenzeCMS.csproj", "{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -259,6 +261,10 @@ Global
 		{1914FAAB-9B86-4B76-90CA-E16D3C8984FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1914FAAB-9B86-4B76-90CA-E16D3C8984FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1914FAAB-9B86-4B76-90CA-E16D3C8984FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
