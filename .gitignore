@@ -5,3 +5,6 @@
 /.vs
 src/FluentCMS/temp
 /src/ZenzeCMS/files
+/src/ZenzeCMS/appsettings.json
+/src/ZenzeCMS/zenzecms-log.db
+/src/ZenzeCMS/zenzecms.db
