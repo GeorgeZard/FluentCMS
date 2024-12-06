@@ -8,3 +8,4 @@ src/FluentCMS/temp
 /src/ZenzeCMS/appsettings.json
 /src/ZenzeCMS/zenzecms-log.db
 /src/ZenzeCMS/zenzecms.db
+/src/ZenzeCMS/fluentcms.db
