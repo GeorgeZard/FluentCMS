@@ -46,9 +46,4 @@
       <Content Remove="Templates\Zenze\manifest.json" />
       <Content Remove="Templates\Zenze\site.json" />
     </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Templates\Zenze\Files\assets\" />
-      <Folder Include="Templates\Zenze\Files\images\" />
-      <Folder Include="Templates\Zenze\Files\svg\" />
-    </ItemGroup>
 </Project>
