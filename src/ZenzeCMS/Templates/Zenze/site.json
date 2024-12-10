@@ -660,6 +660,26 @@
             "Name": "Default",
             "Category": "Misc",
             "Description": "Default misc section"
+        },
+        {
+            "Name": "Default",
+            "Category": "Footer",
+            "Description": "Default footer section"
+        },
+        {
+            "Name": "FooterBlack",
+            "Category": "Footer",
+            "Description": "Default footer black section"
+        },
+        {
+            "Name": "FooterBlue",
+            "Category": "Footer",
+            "Description": "Default footer blue section"
+        },
+        {
+            "Name": "FooterWhite",
+            "Category": "Footer",
+            "Description": "Default footer white section"
         }
 
     ],
