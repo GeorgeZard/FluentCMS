@@ -825,6 +825,66 @@
             "Name": "FooterWhite",
             "Category": "Footer",
             "Description": "Default footer white section"
+        },
+        {
+            "Name": "Default",
+            "Category": "FAQ",
+            "Description": "Default FAQ"
+        },
+        {
+            "Name": "CommonFAQ",
+            "Category": "FAQ",
+            "Description": "Common Questions FAQ"
+        },
+        {
+            "Name": "ListFAQ",
+            "Category": "FAQ",
+            "Description": "List Questions FAQ"
+        },
+        {
+            "Name": "PricingFAQ",
+            "Category": "FAQ",
+            "Description": "Pricing FAQ"
+        },
+        {
+            "Name": "QuickFAQ",
+            "Category": "FAQ",
+            "Description": "Quick Questions FAQ"
+        },
+        {
+            "Name": "Default",
+            "Category": "Features",
+            "Description": "Default Features"
+        },
+        {
+            "Name": "ButtonFeatures",
+            "Category": "Features",
+            "Description": "Button Features"
+        },
+        {
+            "Name": "CorporateFeatures",
+            "Category": "Features",
+            "Description": "Corporate Features"
+        },
+        {
+            "Name": "MaterialFeatures",
+            "Category": "Features",
+            "Description": "Material UI Features"
+        },
+        {
+            "Name": "BarsFeatures",
+            "Category": "Features",
+            "Description": "Progress Bar UI Features"
+        },
+        {
+            "Name": "ListFeatures",
+            "Category": "Features",
+            "Description": "List Bar UI Features"
+        },
+        {
+            "Name": "CanvasFeatures",
+            "Category": "Features",
+            "Description": "Canvas List Features"
         }
 
     ],
