@@ -26809,7 +26809,7 @@ blockquote.video-wrapper .video-content.icon-top:before {
   background-color: rgba(30,34,40,0.5);
 }
 
-.before\:bg-\[url\(\.\/assets\/img\/photos\/lines\.png\)\]::before {
+.before\:bg-\[url\(\.\/files\/img\/photos\/lines\.png\)\]::before {
   content: var(--tw-content);
   background-image: url(/files/img/photos/lines.png);
 }
