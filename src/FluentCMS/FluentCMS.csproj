@@ -39,4 +39,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Templates\Zenze\Files\fonts\custom\selection.json" />
+    <Content Remove="Templates\Zenze\Files\fonts\unicons\selection.json" />
+    <Content Remove="Templates\Zenze\manifest.json" />
+    <Content Remove="Templates\Zenze\site.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Templates\Zenze\manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Templates\Zenze\site.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
