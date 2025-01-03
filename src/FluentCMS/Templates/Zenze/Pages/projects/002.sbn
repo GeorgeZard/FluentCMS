@@ -1,0 +1,24 @@
+<section class="wrapper !bg-[#ffffff]">
+    <div class="container py-[4.5rem] xl:!py-24 lg:!py-24 md:!py-24">
+        <div class="itemgrid grid-view projects-masonry">
+           
+            <div class="flex flex-wrap mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px] mt-[-50px] xl:mt-[-80px] lg:mt-[-80px] md:mt-[-80px] isotope">
+
+                {{ for project in Items }}
+                <div class="project item xl:w-4/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] xl:mt-[80px] xl:px-[20px] lg:mt-[80px] lg:px-[20px] md:mt-[80px] md:px-[20px] px-[15px] mt-[50px] max-w-full product">
+                    <figure class="lift rounded !mb-6">
+                        <a href="/projects/detail/{{ project.Id }}">
+                            <img src="/files/{{ project.image }}" alt="{{ project.project_title }}"></img>
+                        </a>
+                    </figure>
+                    <div class="project-details flex justify-center flex-col">
+                        <div class="post-header">                            
+                            <h3 class="post-title">{{ project.project_title }}</h3>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

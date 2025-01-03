@@ -1,0 +1,12 @@
+<section class="wrapper !bg-[rgba(254,254,254)]">
+    <div class="container pt-10 pb-9 xl:pt-[4.5rem] lg:pt-[4.5rem] md:pt-[4.5rem] xl:pb-[3rem] lg:pb-[3rem] md:pb-[3rem] !text-center">
+        <div class="flex flex-wrap mx-[-15px]">
+            <div class="md:w-10/12 lg:w-8/12 xl:w-7/12 w-full flex-[0_0_auto] px-[15px] max-w-full !mx-auto">
+                <div class="post-header">
+                   
+                    <h1 class="text-[calc(1.365rem_+_1.38vw)] font-bold leading-[1.2] xl:text-[2.4rem] !mb-3">{{ Item.project_title }}</h1>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,73 @@
+<div class="wrapper !bg-[#ffffff]  border-b-[rgba(164,174,198,0.2)] border-b border-solid">
+    <div class="container !pb-[4.5rem] xl:!pb-24 lg:!pb-24 md:!pb-24">
+        <article>
+            <div class="post-slider !mb-8 xl:!mb-14 lg:!mb-14 md:!mb-14">
+                <div class="swiper-container dots-over relative !z-10" data-margin="5" data-dots="true" data-nav="true" data-autoheight="true">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide !rounded-[.4rem]">
+                                {{ if Item.image }}
+                                <img class="!rounded-[.4rem]" src="/files/{{ Item.image }}" alt="{{ Item.project_title }}"></img>
+                                {{ end }}
+                                <div class="caption-wrapper p-14">
+                                        <div class="caption bg-[rgba(255,255,255)] opacity-100 !rounded-[.4rem] px-4 py-3 ml-auto mt-auto animate__animated animate__slideInDown animate__delay-1s">
+                                            <h5 class="!mb-0">{{ Item.project_title }}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--/.swiper-slide -->
+                            <!--<div class="swiper-slide !rounded-[.4rem]">
+                                <img class="!rounded-[.4rem]" src="./assets/img/photos/pp8.jpg" alt="image"></img>
+                                    <div class="caption-wrapper p-14">
+                                        <div class="caption bg-[rgba(255,255,255)] opacity-100 !rounded-[.4rem] px-4 py-3 !mx-auto mt-auto animate__animated animate__slideInDown animate__delay-1s">
+                                            <h5 class="!mb-0">Vivamus sagittis lacus augue</h5>
+                                        </div>
+                                    
+                                    </div>
+                                    
+                            </div>-->
+                            <!--/.swiper-slide -->
+                           
+                        </div>
+                        <!--/.swiper-wrapper -->
+                    </div>
+                    <!-- /.swiper -->
+                </div>
+                <!-- /.swiper-container -->
+            </div>
+            <!-- /.post-slider -->
+            <div class="flex flex-wrap mx-[-15px]">
+                <div class="xl:w-10/12 xl:!ml-[8.33333333%] lg:w-10/12 lg:!ml-[8.33333333%] w-full flex-[0_0_auto] px-[15px] max-w-full">
+                    <h2 class="text-[calc(1.265rem_+_0.18vw)] font-bold xl:text-[1.4rem] leading-[1.35] mb-4">About the Project</h2>
+                    <div class="flex flex-wrap mx-0">
+                        <div class="xl:w-9/12 lg:w-9/12 md:w-9/12 w-full flex-[0_0_auto] max-w-full">
+                            <p>
+                                {{ project.description }}
+                            </p>
+                            
+                        </div>
+                        <!--/column -->
+                        <div class="xl:w-2/12 lg:w-2/12 md:w-2/12 w-full flex-[0_0_auto] max-w-full !ml-auto">
+                            <ul class="pl-0 list-none">
+                                <li>
+                                    <h5 class="!mb-1">Date</h5>
+                                    <p>{{ Item.start_date }} - {{ Item.end_date }}</p>
+                                </li>
+                                <li>
+                                    <h5 class="!mb-1">Client Name</h5>
+                                    <p>{{ Item.technologies }}</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/column -->
+                    </div>
+                    <!--/.row -->
+                </div>
+                <!-- /column -->
+            </div>
+            <!--/.row -->
+        </article>
+        <!-- /.project -->
+    </div>
+    <!-- /.container -->
+</div>

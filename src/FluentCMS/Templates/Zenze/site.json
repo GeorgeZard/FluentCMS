@@ -1,14 +1,14 @@
 {
-    "Name": "FluentCMS",
-    "Description": "FluentCMS default site template including some samples",
+    "Name": "ZenzeCMS",
+    "Description": "ZenzeCMS default site template",
     "Layout": "DefaultLayout",
     "EditLayout": "EditLayout",
     "DetailLayout": "SingleLayout",
     "AdminRoles": [ "Administrators" ],
     "ContributorRoles": [ "Contributors" ],
     "Settings": {
-        "MetaTitle": "FluentCMS - AI-Driven Blazor CMS",
-        "MetaDescription": "FluentCMS is an AI-powered, open-source Blazor CMS designed to streamline content management, offering flexibility and scalability for modern websites.",
+        "MetaTitle": "ZenzeCMS - AI-Driven Blazor CMS",
+        "MetaDescription": "ZenzeCMS is an AI-powered CMS for business that provide services",
         "GoogleTagsId": "",
         "Head": "",
         "Index": "true",
@@ -70,74 +70,47 @@
             "Settings": {
                 "Index": "true",
                 "Follow": "true"
-            },
-            "Plugins": [
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Main",
-                    "Type": "TextHTMLContent",
-                    "ContentPath": "001.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Main",
-                    "Type": "TextHTMLContent",
-                    "Cols": 6,
-                    "ContentPath": "002.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Main",
-                    "Type": "TextHTMLContent",
-                    "Cols": 6,
-                    "ContentPath": "003.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Dark",
-                    "ContentPath": "004.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Bottom",
-                    "Cols": 4,
-                    "ContentPath": "005.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Bottom",
-                    "Cols": 8,
-                    "ContentPath": "006.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "Bottom",
-                    "ContentPath": "007.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "BottomGray",
-                    "ContentPath": "008.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "BottomGray",
-                    "ContentPath": "009.html"
-                },
-                {
-                    "Definition": "TextHTML Plugin",
-                    "Section": "BottomGray",
-                    "ContentPath": "010.html"
-                },
-                {
-                    "Definition": "Contact Us Plugin",
-                    "Section": "BottomGray",
-                    "Settings": {
-                        "EmailAddress": "support@fluentcms.com",
-                        "Class": "p-4 bg-white dark:bg-gray-800 border dark:border-gray-700 rounded shadow"
-                    }
-                }
-            ]
+            }
+        },
+        {
+            "Title": "Contact",
+            "Path": "/contact",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            }
+        },
+        {
+            "Title": "Terms",
+            "Path": "/terms",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            }
+        },
+        {
+            "Title": "About",
+            "Path": "/about",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            }
+        },
+        {
+            "Title": "Privacy",
+            "Path": "/privacy",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            }
         },
         {
             "Title": "Blogs",
@@ -190,6 +163,63 @@
                             "Settings": {
                                 "Template": "blogs/detail/002.sbn",
                                 "ContentTypeSlug": "blog"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Title": "Projects",
+            "Path": "/projects",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            },
+            "Plugins": [
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "ContentPath": "projects/001.html"
+                },
+                {
+                    "Definition": "Content List",
+                    "Section": "Main",
+                    "Settings": {
+                        "Template": "projects/002.sbn",
+                        "ContentTypeSlug": "project"
+                    }
+                }
+            ],
+            "Children": [
+                {
+                    "Title": "Project Detail",
+                    "Path": "/detail",
+                    "Layout": "SingleLayout",
+                    "ViewRoles": [ "All Users" ],
+                    "Settings": {
+                        "Index": "true",
+                        "Follow": "true"
+                    },
+                    "Plugins": [
+                        {
+                            "Definition": "Content Detail",
+                            "Section": "Main",
+                            "Cols": 12,
+                            "Settings": {
+                                "Template": "projects/detail/001.sbn",
+                                "ContentTypeSlug": "project"
+                            }
+                        },
+                        {
+                            "Definition": "Content Detail",
+                            "Section": "Main",
+                            "Cols": 12,
+                            "Settings": {
+                                "Template": "projects/detail/002.sbn",
+                                "ContentTypeSlug": "project"
                             }
                         }
                     ]
@@ -1125,225 +1155,106 @@
             ]
         },
         {
-            "Slug": "job-listing",
-            "Title": "Job Listing",
-            "Description": "Content type for job listings",
+            "Slug": "project",
+            "Title": "Project",
+            "Description": "A content type for showcasing individual portfolio projects.",
             "Fields": [
                 {
-                    "Name": "Title",
+                    "Name": "project_title",
+                    "Description": "Title of the project",
                     "Type": "string",
                     "Required": true,
-                    "Description": "Title of the job listing",
-                    "Label": "Title",
+                    "Unique": true,
+                    "Label": "Project Title",
                     "Settings": {
-                        "Placeholder": "Enter job title",
+                        "Placeholder": "Enter project title",
                         "DataTableColumnOrder": 1,
                         "DataTableVisible": true,
                         "DataTableViewComponent": "StringFieldDataTableView",
                         "FormViewOrder": 1,
                         "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText",
-                        "DefaultValue": "Untitled"
+                        "FormViewComponent": "StringFieldFormText"
                     }
                 },
                 {
-                    "Name": "Slug",
+                    "Name": "description",
+                    "Description": "Detailed description of the project",
                     "Type": "string",
+                    "": "",
                     "Required": true,
-                    "Description": "Url slug of the job listing",
-                    "Label": "Slug",
+                    "Unique": false,
+                    "Label": "Description",
                     "Settings": {
-                        "Placeholder": "Enter url slug",
+                        "Placeholder": "Enter project description",
                         "DataTableColumnOrder": 2,
                         "DataTableVisible": true,
                         "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 1,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText",
-                        "DefaultValue": "Untitled"
+                        "FormViewOrder": 3,
+                        "FormColWidth": 12,
+                        "FormViewComponent": "StringFieldFormMarkdownText"
                     }
                 },
                 {
-                    "Name": "Short Description",
-                    "Type": "string",
-                    "Description": "Short Description of the job listing",
+                    "Name": "start_date",
+                    "Description": "The date the project was started",
+                    "Type": "datetime",
                     "Required": true,
-                    "Label": "Short Description",
+                    "Unique": false,
+                    "Label": "Start Date",
                     "Settings": {
-                        "Placeholder": "Enter short description 2 - 3 lines for SEO",
-                        "DataTableVisible": false,
+                        "Placeholder": "Choose the date the project was started",
+                        "DataTableColumnOrder": 3,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "DateFieldDataTableView",
+                        "FormViewOrder": 4,
+                        "FormColWidth": 6,
+                        "FormViewComponent": "DateFieldFormDate"
+                    }
+                },
+                {
+                    "Name": "end_date",
+                    "Description": "The date the project was completed (optional)",
+                    "Type": "datetime",
+                    "Required": false,
+                    "Unique": false,
+                    "Label": "End Date",
+                    "Settings": {
+                        "Placeholder": "Choose the date the project was finished",
+                        "DataTableColumnOrder": 4,
+                        "DataTableVisible": true,
+                        "DataTableViewComponent": "DateFieldDataTableView",
+                        "FormViewOrder": 5,
+                        "FormColWidth": 6,
+                        "FormViewComponent": "DateFieldFormDate"
+                    }
+                },
+                {
+                    "Name": "technologies",
+                    "Description": "List of technologies used in the project",
+                    "Type": "string",
+                    "Required": true,
+                    "Unique": false,
+                    "Label": "Technologies",
+                    "Settings": {
+                        "Placeholder": "Enter name of technologies used in the project",
+                        "DataTableColumnOrder": 2,
+                        "DataTableVisible": true,
                         "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 2,
+                        "FormViewOrder": 6,
                         "FormColWidth": 12,
                         "FormViewComponent": "StringFieldFormTextArea"
                     }
                 },
                 {
-                    "Name": "Description",
+                    "Name": "project_url",
+                    "Description": "URL link to the live project or repository",
                     "Type": "string",
-                    "Required": true,
-                    "Description": "Description of the job listing",
-                    "Label": "Description",
+                    "Required": false,
+                    "Unique": false,
+                    "Label": "Project URL",
                     "Settings": {
-                        "Placeholder": "Enter job description",
-                        "DataTableVisible": false,
-                        "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 2,
-                        "FormColWidth": 12,
-                        "FormViewComponent": "StringFieldFormRichText"
-                    }
-                },
-                {
-                    "Name": "Location",
-                    "Type": "string",
-                    "Required": true,
-                    "Description": "Location of the job",
-                    "Label": "Location",
-                    "Settings": {
-                        "Placeholder": "Enter job location",
-                        "DataTableColumnOrder": 2,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 3,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText"
-                    }
-                },
-                {
-                    "Name": "Company",
-                    "Type": "string",
-                    "Required": true,
-                    "Description": "Name of the company",
-                    "Label": "Company",
-                    "Settings": {
-                        "Placeholder": "Enter company name",
-                        "DataTableColumnOrder": 3,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 4,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText"
-                    }
-                },
-                {
-                    "Name": "Type",
-                    "Type": "single-select",
-                    "Description": "Type of job (e.g., full-time, part-time)",
-                    "Required": true,
-                    "Label": "Job Type",
-                    "Settings": {
-                        "Placeholder": "Select job type",
-                        "DataTableColumnOrder": 4,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "SelectFieldDataTableBadge",
-                        "FormViewOrder": 5,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "SelectFieldFormSelect",
-                        "Options": "Full-time\nPart-time\nContract\nInternship\nFreelance"
-                    }
-                },
-                {
-                    "Name": "Application Deadline",
-                    "Type": "datetime",
-                    "Description": "Date of Application Deadline",
-                    "Label": "Application Deadline",
-                    "Required": true,
-                    "Settings": {
-                        "Placeholder": "Select deadline date",
-                        "DataTableColumnOrder": 5,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "DateFieldDataTableView",
-                        "FormViewOrder": 6,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "DateFieldFormDate",
-                        "Format": "yyyy-MM-dd"
-                    }
-                }
-            ],
-            "Contents": [
-                {
-                    "Title": "Frontend Developer at Tech Innovations Inc",
-                    "Slug": "frontend-developer-at-tech-innovations-inc",
-                    "Short Description": "Exciting opportunity for a skilled Frontend Developer to join Tech Innovations Inc. and contribute to cutting-edge projects in San Francisco. Apply now!",
-                    "Description": "Join our dynamic team as a Frontend Developer and contribute to cutting-edge projects that push the boundaries of web technology. You'll be responsible for developing user-facing features, optimizing web applications for maximum speed and scalability, and collaborating with cross-functional teams to deliver high-quality software solutions.",
-                    "Type": "Full-time",
-                    "Location": "San Fransisco, US",
-                    "Company": "Tech Innovations Inc",
-                    "Application Deadline": "2024-09-01T15:04:05.641Z"
-                },
-                {
-                    "Title": "Data Scientist at AI Innovations Ltd",
-                    "Slug": "data-scientist-at-ai-innovations-ltd",
-                    "Short Description": "Exciting opportunity for a talented Data Scientist to join AI Innovations Ltd. Apply now to work on groundbreaking AI projects!",
-                    "Description": "AI Innovations Ltd is seeking a skilled Data Scientist to contribute to cutting-edge AI projects. You'll be responsible for analyzing large datasets, developing machine learning models, and generating actionable insights to drive business decisions. If you're passionate about artificial intelligence and thrive in a collaborative environment, we want to hear from you!",
-                    "Type": "Full-time",
-                    "Location": "Seattle, US",
-                    "Company": "AI Innovations Ltd",
-                    "Application Deadline": "2024-09-15T15:04:05.641Z"
-                },
-                {
-                    "Title": "UX/UI Designer at Creative Solutions Inc",
-                    "Slug": "ux-ui-designer-at-creative-solutions-inc",
-                    "Short Description": "Exciting opportunity for a creative UX/UI Designer to join Creative Solutions Inc. Apply now and showcase your design expertise!",
-                    "Description": "Join our team at Creative Solutions Inc as a UX/UI Designer and play a key role in crafting intuitive and visually stunning user experiences. You'll collaborate with product managers and developers to translate user needs into engaging design solutions. If you're passionate about design and have a keen eye for detail, we'd love to hear from you!",
-                    "Type": "Contract",
-                    "Location": "Remote",
-                    "Company": "Creative Solutions Inc",
-                    "Application Deadline": "2024-09-30T15:04:05.641Z"
-                },
-                {
-                    "Title": "Marketing Manager at Tech Innovations Inc",
-                    "Slug": "marketing-manager-at-tech-innovations-inc",
-                    "Short Description": "Exciting opportunity for a results-driven Marketing Manager to join Tech Innovations Inc. Apply now and drive our marketing initiatives!",
-                    "Description": "Tech Innovations Inc is seeking a talented Marketing Manager to develop and execute strategic marketing campaigns. You'll oversee digital marketing efforts, manage marketing budgets, and analyze campaign performance. If you're passionate about marketing and have a track record of driving growth, we want to hear from you!",
-                    "Type": "Full-time",
-                    "Location": "San Francisco, US",
-                    "Company": "Tech Innovations Inc",
-                    "Application Deadline": "2024-10-10T15:04:05.641Z"
-                },
-                {
-                    "Title": "Software Engineer (Mobile) at MobileTech Solutions",
-                    "Slug": "software-engineer-mobile-at-mobiletech-solutions",
-                    "Short Description": "Exciting opportunity for a skilled Mobile Software Engineer to join MobileTech Solutions. Apply now and develop innovative mobile applications!",
-                    "Description": "Join MobileTech Solutions as a Mobile Software Engineer and work on cutting-edge mobile applications. You'll collaborate with cross-functional teams to design, develop, and maintain mobile apps for iOS and Android platforms. If you're passionate about mobile development and have a strong foundation in software engineering principles, we'd love to hear from you!",
-                    "Type": "Full-time",
-                    "Location": "Remote",
-                    "Company": "MobileTech Solutions",
-                    "Application Deadline": "2024-10-20T15:04:05.641Z"
-                }
-            ]
-        },
-        {
-            "Slug": "book",
-            "Title": "Book",
-            "Description": "Content type for books",
-            "Fields": [
-                {
-                    "Name": "Title",
-                    "Type": "string",
-                    "Required": true,
-                    "Description": "Title of the book",
-                    "Label": "Title",
-                    "Settings": {
-                        "Placeholder": "Enter book title",
-                        "DataTableColumnOrder": 1,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 1,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText",
-                        "DefaultValue": "Untitled"
-                    }
-                },
-                {
-                    "Name": "Author",
-                    "Type": "string",
-                    "Required": true,
-                    "Description": "Author of the book",
-                    "Label": "Author",
-                    "Settings": {
-                        "Placeholder": "Enter author name",
-                        "DataTableColumnOrder": 2,
+                        "Placeholder": "Enter url or repisotory link of project",
+                        "DataTableColumnOrder": 6,
                         "DataTableVisible": true,
                         "DataTableViewComponent": "StringFieldDataTableView",
                         "FormViewOrder": 2,
@@ -1352,103 +1263,77 @@
                     }
                 },
                 {
-                    "Name": "ISBN",
-                    "Type": "string",
-                    "Required": true,
-                    "Unique": true,
-                    "Description": "ISBN of the book",
-                    "Label": "ISBN",
+                    "Name": "image",
+                    "Description": "An image or screenshot of the project",
+                    "Type": "single-file",
+                    "Required": false,
+                    "Unique": false,
+                    "Label": "Image",
                     "Settings": {
-                        "Placeholder": "Enter ISBN",
-                        "DataTableColumnOrder": 3,
+                        "Placeholder": "Choose post main image",
                         "DataTableVisible": true,
-                        "DataTableViewComponent": "StringFieldDataTableView",
+                        "DataTableViewComponent": "SingleFileFieldDataTableFile",
                         "FormViewOrder": 3,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText"
-                    }
-                },
-                {
-                    "Name": "Genre",
-                    "Type": "string",
-                    "Required": true,
-                    "Description": "Genre of the book",
-                    "Label": "Genre",
-                    "Settings": {
-                        "Placeholder": "Enter genre",
-                        "DataTableColumnOrder": 4,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 4,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "StringFieldFormText"
-                    }
-                },
-                {
-                    "Name": "Publication Date",
-                    "Type": "datetime",
-                    "Required": true,
-                    "Description": "Publication date of the book",
-                    "Label": "Publication Date",
-                    "Settings": {
-                        "Placeholder": "Select publication date",
-                        "DataTableColumnOrder": 5,
-                        "DataTableVisible": true,
-                        "DataTableViewComponent": "DateFieldDataTableView",
-                        "FormViewOrder": 5,
-                        "FormColWidth": 6,
-                        "FormViewComponent": "DateFieldFormDate",
-                        "Format": "yyyy MMMM"
-                    }
-                },
-                {
-                    "Name": "Description",
-                    "Type": "string",
-                    "Required": true,
-                    "Description": "Description of the book",
-                    "Label": "Description",
-                    "Settings": {
-                        "Placeholder": "Enter book description",
-                        "DataTableVisible": false,
-                        "DataTableViewComponent": "StringFieldDataTableView",
-                        "FormViewOrder": 6,
                         "FormColWidth": 12,
-                        "FormViewComponent": "StringFieldFormMarkdownText"
+                        "FormViewComponent": "SingleFileFieldFormFilePicker"
                     }
                 }
             ],
             "Contents": [
                 {
-                    "Title": "1984",
-                    "Author": "George Orwell",
-                    "ISBN": "9780451524935",
-                    "Genre": "Dystopian Fiction",
-                    "Publication Date": "1949-06-08T00:00:00.000Z",
-                    "Description": "1984 is a dystopian novel set in a totalitarian regime where the government monitors and controls every aspect of citizens' lives. It explores themes of surveillance, propaganda, and the erosion of individual freedom."
+                    "project_title": "Personal Portfolio Website",
+                    "description": "A personal website showcasing my portfolio, blog, and contact information.",
+                    "start_date": "2023-01-15",
+                    "end_date": "2023-03-10",
+                    "technologies": "HTML, CSS, JavaScript, Tailwind CSS",
+                    "project_url": "https://portfolio.example.com",
+                    "image": "/files/contents/portfolio.png"
                 },
                 {
-                    "Title": "To Kill a Mockingbird",
-                    "Author": "Harper Lee",
-                    "ISBN": "9780061120084",
-                    "Genre": "Fiction",
-                    "Publication Date": "1960-07-11T00:00:00.000Z",
-                    "Description": "To Kill a Mockingbird is a classic novel that addresses issues of racial injustice and moral growth in a small Southern town. Through the eyes of young Scout Finch, the book explores themes of empathy, compassion, and standing up for what is right."
+                    "project_title": "E-commerce Platform",
+                    "description": "An e-commerce platform with a fully functional product listing, cart, and checkout system.",
+                    "start_date": "2022-05-01",
+                    "end_date": "2022-07-20",
+                    "technologies": "React,Node.js,MongoDB,Stripe API",
+                    "project_url": "https://ecommerce.example.com",
+                    "image": "/files/contents/commerce.png"
                 },
                 {
-                    "Title": "The Great Gatsby",
-                    "Author": "F. Scott Fitzgerald",
-                    "ISBN": "9780743273565",
-                    "Genre": "Fiction",
-                    "Publication Date": "1925-04-10T00:00:00.000Z",
-                    "Description": "The Great Gatsby is a novel set in the Roaring Twenties, depicting the decadence and moral decay of the Jazz Age. It explores themes of wealth, love, and the American Dream through the eyes of narrator Nick Carraway and the enigmatic Jay Gatsby."
+                    "project_title": "Task Management App",
+                    "description": "A mobile-friendly task management application with features like task assignment and deadlines.",
+                    "start_date": "2022-08-10",
+                    "end_date": "2022-10-05",
+                    "technologies": "Vue.js, Firebase, Tailwind CSS",
+                    "project_url": "https://taskmanager.example.com",
+                    "image": "/files/contents/task.png"
                 },
                 {
-                    "Title": "The Hobbit",
-                    "Author": "J.R.R. Tolkien",
-                    "ISBN": "9780345339683",
-                    "Genre": "Fantasy",
-                    "Publication Date": "1937-09-21T00:00:00.000Z",
-                    "Description": "The Hobbit is a fantasy novel that follows the journey of Bilbo Baggins, a hobbit who is swept into an epic quest to reclaim the lost kingdom of Erebor from the dragon Smaug. Along the way, Bilbo encounters trolls, elves, and a mysterious creature named Gollum."
+                    "project_title": "Social Media Dashboard",
+                    "description": "A dashboard that aggregates social media analytics from platforms like Twitter, Facebook, and Instagram.",
+                    "start_date": "2023-02-01",
+                    "end_date": "2023-04-15",
+                    "technologies": "Next.js, Node.js, Chart.js, API Integrations",
+                    "project_url": "https://socialdashboard.example.com",
+                    "image": "/files/contents/dashboard.png"
+                },
+                {
+                    "project_title": "Blog Platform",
+                    "description": "A blog platform with rich text editing, category management, and SEO optimizations.",
+                    "start_date": "2021-11-01",
+                    "end_date": "2022-01-15",
+                    "technologies": "WordPress, PHP, MySQL",
+                    "project_url": "https://blogplatform.example.com",
+                    "image": "/files/contents/blog.png"
+                },
+                {
+                    "project_title": "Real Estate Listing Website",
+                    "description": "A website for real estate agencies to list properties with interactive maps and contact features.",
+                    "start_date": "2022-09-05",
+                    "end_date": "2022-11-20",
+                    "technologies": "Laravel , Vue.js, Leaflet.js",
+                    "project_url": "https://realestate.example.com",
+                    "image": "/files/contents/real-estate.png"
+
                 }
             ]
         }

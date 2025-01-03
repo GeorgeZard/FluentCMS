@@ -1,26 +1,61 @@
-{{ for item in Items }}
-    <a href="/blogs/detail/{{ item.Id }}" class="blog-post border border-border-muted flex flex-wrap mb-8 p-4 bg-surface-accent shadow rounded-lg">
-        {{ if item.FeaturedImage }}
-        <div class="blog-featured-image w-32 h-32 flex-shrink-0 mr-4">
-            <img class="w-full h-full object-cover rounded-lg" src="/files/{{ item.FeaturedImage }}" alt="Featured Image">
-        </div>
-        {{ end }}
-        <div class="flex-1">
-            <h2 class="text-2xl font-bold text-content">{{ item.Title }}</h2>
-            <div class="blog-meta text-sm text-content mt-2">
-                <span class="blog-slug">Slug: <span class="font-medium text-content-muted">{{ item.Slug }}</span></span> | 
-                <span class="blog-published-at">Published At: <span class="font-medium text-content-muted">{{ item.PublishedAt }}</span></span> | 
-                <span class="blog-status">Status: <span class="font-medium text-content-muted">{{ item.Status }}</span></span> | 
-                <span class="blog-order">Order: <span class="font-medium text-content-muted">{{ item.Order }}</span></span>
-            </div>
-            <div class="blog-tags mt-4">
-                <strong class="text-content">Tags:</strong>
-                <div class="inline-flex flex-wrap space-x-2 mt-2">
-                    {{ for tag in item.Tags }}
-                        <span class="blog-tag bg-primary-100  dark:bg-primary-800/20 text-primary-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">{{ tag }}</span>
+
+<div class="wrapper !bg-[#ffffff]">
+      <div class="container !pt-[3rem] !pb-[4.5rem] xl:!pb-24 lg:!pb-24 md:!pb-24 ">
+          <div class="flex flex-wrap mx-[-15px]">
+             <div class="xl:w-10/12 lg:w-10/12 w-full flex-[0_0_auto] px-[15px] max-w-full !mx-auto">
+                <div class="blog itemgrid grid-view">
+                    <div class="flex flex-wrap mx-[-15px] isotope xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px] mt-[-40px] !mb-8">
+                    {{ for item in Items }}
+
+                         <article class="item post xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] xl:px-[20px] lg:px-[20px] md:px-[20px] mt-[40px] px-[15px] max-w-full">
+                          <div class="card">
+                            <figure class="card-img-top overlay overlay-1 hover-scale group">
+                                <a href="#">
+                                    {{ if item.FeaturedImage }}
+                                        <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105" src="/files/{{ item.FeaturedImage }}" alt="{{ item.Title }}">
+                                        
+                                        </img>
+                                    {{ end }}
+                                </a>
+                              <figcaption class="group-hover:opacity-100 absolute w-full h-full opacity-0 text-center px-4 py-3 inset-0 z-[5] pointer-events-none p-2">
+                                <h5 class="from-top  !mb-0 absolute w-full translate-y-[-80%] p-[.75rem_1rem] left-0 top-2/4">Read More</h5>
+                              </figcaption>
+                            </figure>
+                            <div class="card-body flex-[1_1_auto] p-[40px] xl:p-[1.75rem_1.75rem_1rem_1.75rem] lg:p-[1.75rem_1.75rem_1rem_1.75rem] md:p-[1.75rem_1.75rem_1rem_1.75rem] sm:pb-4 xsm:pb-4  ">
+                              <div class="post-header !mb-[.9rem]">
+
+                                {{ for tag in item.Tags }}
+                                   <div class="inline-flex mb-[.4rem] uppercase tracking-[0.02rem] text-[0.7rem] font-bold text-[#aab0bc] relative align-top pl-[1.4rem] before:content-[''] before:absolute before:inline-block before:translate-y-[-60%] before:w-3 before:h-[0.05rem] before:left-0 before:top-2/4 before:bg-[#3f78e0]">
+                                      <a href="javascript:void(0)" class="hover" rel="category">{{ tag }}</a>
+                                    </div>
+                                {{ end }}
+
+                                <h2 class="post-title h3 !mt-1 !mb-3"><a class="text-[#343f52] hover:text-[#3f78e0]" href="/blogs/detail/{{ item.Id }}">{{ item.Title }}</a></h2>
+                              </div>
+                              
+                              <div class="!relative">
+                                <p>
+                                    {{ item.Content }}
+                                </p>
+                              </div>
+                              
+                            </div>
+                            
+                            <div class="card-footer xl:p-[1.25rem_1.75rem_1.25rem] lg:p-[1.25rem_1.75rem_1.25rem] md:p-[1.25rem_1.75rem_1.25rem] p-[18px_40px]">
+                              <ul class="text-[0.7rem] text-[#aab0bc] m-0 p-0 list-none flex  !mb-0">
+                                <li class="post-date inline-block"><i class="uil uil-calendar-alt pr-[0.2rem] align-[-.05rem] before:content-['\e9ba']"></i><span>{{ item.PublishedAt }}</span></li>
+                              </ul>
+                              
+                            </div>
+                            
+                          </div>
+                          
+                    </article>
+
                     {{ end }}
+                    </div>
                 </div>
-            </div>
-        </div>
-    </a>
-{{ end }}
+             </div>
+          </div>
+      </div>
+</div>
