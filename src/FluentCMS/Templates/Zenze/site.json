@@ -619,11 +619,6 @@
             "Description": "Hero10 for business companies"
         },
         {
-            "Name": "Hero11",
-            "Category": "Hero",
-            "Description": "Hero11 for business companies"
-        },
-        {
             "Name": "Hero12",
             "Category": "Hero",
             "Description": "Hero12 for business companies"
@@ -722,6 +717,11 @@
             "Name": "Default",
             "Category": "Header",
             "Description": "Default Header 1"
+        },
+        {
+            "Name": "Header11",
+            "Category": "Header",
+            "Description": "Default Header 11"
         },
         {
             "Name": "AboutMe",
@@ -962,8 +962,22 @@
             "Name": "CanvasFeatures",
             "Category": "Features",
             "Description": "Canvas List Features"
+        },
+        {
+            "Name": "Default",
+            "Category": "Subscription",
+            "Description": "3 Simple Plans"
+        },
+        {
+            "Name": "Four",
+            "Category": "Subscription",
+            "Description": "4 Simple Plans"
+        },
+        {
+            "Name": "Compare",
+            "Category": "Subscription",
+            "Description": "Compare Plans"
         }
-
     ],
     "ContentTypes": [
         {
