@@ -42,7 +42,7 @@
                     <div class="flex flex-wrap mx-0">
                         <div class="xl:w-9/12 lg:w-9/12 md:w-9/12 w-full flex-[0_0_auto] max-w-full">
                             <p>
-                                {{ project.description }}
+                                {{ Item.description }}
                             </p>
                             
                         </div>
@@ -55,7 +55,7 @@
                                 </li>
                                 <li>
                                     <h5 class="!mb-1">Client Name</h5>
-                                    <p>{{ Item.technologies }}</p>
+                                    <p>{{ Item.customer }}</p>
                                 </li>
                             </ul>
                         </div>

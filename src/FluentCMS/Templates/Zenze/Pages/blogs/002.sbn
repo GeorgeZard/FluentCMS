@@ -10,7 +10,7 @@
                          <article class="item post xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] xl:px-[20px] lg:px-[20px] md:px-[20px] mt-[40px] px-[15px] max-w-full">
                           <div class="card">
                             <figure class="card-img-top overlay overlay-1 hover-scale group">
-                                <a href="#">
+                                <a href="/blogs/detail/{{ item.Id }}">
                                     {{ if item.FeaturedImage }}
                                         <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105" src="/files/{{ item.FeaturedImage }}" alt="{{ item.Title }}">
                                         

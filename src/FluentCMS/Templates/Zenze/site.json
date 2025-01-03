@@ -719,9 +719,29 @@
             "Description": "Default Header 1"
         },
         {
-            "Name": "Header11",
+            "Name": "HeaderDark",
             "Category": "Header",
-            "Description": "Default Header 11"
+            "Description": "Dark Header"
+        },
+        {
+            "Name": "HeaderBlue",
+            "Category": "Header",
+            "Description": "Blue Header"
+        },
+        {
+            "Name": "HeaderCenterLight",
+            "Category": "Header",
+            "Description": "Header with logo in center with light color"
+        },
+        {
+            "Name": "HeaderCenterDark",
+            "Category": "Header",
+            "Description": "Header with logo in center with dark color"
+        },
+        {
+            "Name": "HeaderCenterFancy",
+            "Category": "Header",
+            "Description": "Header with logo in center with fancy mode"
         },
         {
             "Name": "AboutMe",
@@ -1117,54 +1137,44 @@
             ],
             "Contents": [
                 {
-                    "Title": "Introduction to Responsive Web Design",
-                    "Content": "In today's digital landscape, responsive web design is crucial for reaching users on multiple devices. This post explores the principles of responsive design and offers tips for implementation.",
-                    "Slug": "introduction-to-responsive-web-design",
-                    "Tags": [ "Html", "Css", "Javascript" ],
+                    "Title": "Ligula tristique quis risus",
+                    "Content": "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.",
+                    "Slug": "blog1",
+                    "Tags": [ "Coding" ],
                     "Status": "Published",
                     "PublishedAt": "2024-06-06T15:04:05.641Z",
                     "Order": 1,
-                    "FeaturedImage": "/files/contents/responsive.jpg"
+                    "FeaturedImage": "/files/img/photos/b4.jpg"
                 },
                 {
-                    "Title": "Exploring the Power of C# LINQ",
-                    "Content": "LINQ (Language-Integrated Query) in C# is a powerful tool for querying and manipulating data. This post dives into the basics of LINQ and demonstrates its usage with practical examples.",
-                    "Slug": "exploring-the-power-of-csharp-linq",
-                    "Tags": [ "C#", "Other" ],
+                    "Title": "Nullam id dolor elit id nibh",
+                    "Content": "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed",
+                    "Slug": "blog2",
+                    "Tags": [ "Workspace" ],
                     "Status": "Published",
                     "PublishedAt": "2024-06-07T15:04:05.641Z",
                     "Order": 2,
-                    "FeaturedImage": "/files/contents/linq.jpg"
+                    "FeaturedImage": "/files/img/photos/b5.jpg"
                 },
                 {
-                    "Title": "Getting Started with Blazor: A Comprehensive Guide",
-                    "Content": "<p>Blazor, Microsoft's innovative web framework, empowers developers to craft interactive web applications seamlessly using C#. This tutorial provides a concise overview of Blazor's core concepts, showcasing its capability to run C# code directly in the browser through WebAssembly.</p><p><br></p><h2>Example</h2><p>Let's explore a basic example: a Blazor component that implements a simple counter.</p><div class=\"ql-code-block-container\" spellcheck=\"false\"><div class=\"ql-code-block\" data-language=\"plain\">Copy code</div><div class=\"ql-code-block\" data-language=\"plain\">@page \"/counter\"</div><div class=\"ql-code-block\" data-language=\"plain\"><br></div><div class=\"ql-code-block\" data-language=\"plain\">&lt;h1&gt;Counter&lt;/h1&gt;</div><div class=\"ql-code-block\" data-language=\"plain\"><br></div><div class=\"ql-code-block\" data-language=\"plain\">&lt;p&gt;Current count: @currentCount&lt;/p&gt;</div><div class=\"ql-code-block\" data-language=\"plain\"><br></div><div class=\"ql-code-block\" data-language=\"plain\">&lt;button class=\"btn btn-primary\" @onclick=\"IncrementCount\"&gt;Click me&lt;/button&gt;</div><div class=\"ql-code-block\" data-language=\"plain\"><br></div><div class=\"ql-code-block\" data-language=\"plain\">@code {</div><div class=\"ql-code-block\" data-language=\"plain\">    private int currentCount = 0;</div><div class=\"ql-code-block\" data-language=\"plain\"><br></div><div class=\"ql-code-block\" data-language=\"plain\">    private void IncrementCount()</div><div class=\"ql-code-block\" data-language=\"plain\">    {</div><div class=\"ql-code-block\" data-language=\"plain\">        currentCount++;</div><div class=\"ql-code-block\" data-language=\"plain\">    }</div><div class=\"ql-code-block\" data-language=\"plain\">}</div></div><p>In this snippet, a Blazor component is defined to maintain and display a count. Upon clicking the button, the count increments without requiring a page refresh, demonstrating Blazor's efficient handling of user interactions and UI updates.</p><p><br></p><h2>Conclusion</h2><p>Blazor presents an enticing opportunity for .NET developers, whether seasoned or new to web development, to harness the power of C# in crafting dynamic web applications. With its seamless integration and intuitive features, Blazor streamlines the development process, making it an invaluable tool in the modern web development landscape.</p><p><br></p><p><br></p><p><br></p><p><br></p>",
-                    "Slug": "getting-started-with-blazor-a-comprehensive-guide",
-                    "Tags": [ "C#", "Blazor", "Javascript" ],
-                    "Status": "In Review",
+                    "Title": "Ultricies fusce porta elit",
+                    "Content": "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed",
+                    "Slug": "blog3",
+                    "Tags": [ "Meeting" ],
+                    "Status": "Published",
                     "PublishedAt": "2024-06-09T15:04:05.641Z",
                     "Order": 3,
-                    "FeaturedImage": "/files/contents/blazor.jpg"
+                    "FeaturedImage": "/files/img/photos/b6.jpg"
                 },
                 {
-                    "Title": "Mastering CSS Grid for Modern Web Layouts",
-                    "Content": "<p>In the realm of web design, CSS Grid has revolutionized the way developers approach layout creation. This comprehensive guide delves into the intricacies of CSS Grid, exploring its two-dimensional grid system that allows for the creation of complex layouts with ease. We will cover the fundamental concepts such as grid containers, grid items, and grid lines, and demonstrate how to use them to build responsive and dynamic web pages.</p><p>You will learn how to define grid tracks, create grid cells, and manage grid areas. Additionally, we will explore advanced techniques like grid auto-placement, grid alignment properties, and the use of CSS Grid with media queries for responsive design. By the end of this post, you will have a solid understanding of how to leverage CSS Grid to create modern, efficient, and visually appealing web layouts.</p>",
-                    "Slug": "mastering-css-grid-for-modern-web-layouts",
-                    "Tags": [ "Css", "Html", "Responsive Design" ],
+                    "Title": "Morbi leo risus porta eget",
+                    "Content": "Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras imperdiet nun eu dolor. Aenean lacinia bibendum nulla sed.",
+                    "Slug": "blog4",
+                    "Tags": [ "Tips" ],
                     "Status": "Published",
                     "PublishedAt": "2024-06-10T15:04:05.641Z",
                     "Order": 4,
-                    "FeaturedImage": "/files/contents/css.webp"
-                },
-                {
-                    "Title": "Advanced JavaScript Techniques for Efficient Web Development",
-                    "Content": "<p>JavaScript remains a cornerstone of modern web development, offering endless possibilities for enhancing user interaction and functionality. This post focuses on advanced JavaScript techniques that can significantly improve the efficiency and performance of your web applications. We will explore topics such as asynchronous programming with Promises and async/await, the use of modern JavaScript features like destructuring and template literals, and the importance of modularizing your code with ES6 modules.</p><p>Furthermore, we will delve into the world of JavaScript frameworks and libraries, discussing how they can streamline your development process and help you build scalable and maintainable applications. Whether you are a seasoned JavaScript developer or just starting out, this post will equip you with the knowledge and tools necessary to take your web development skills to the next level.</p>",
-                    "Slug": "advanced-javascript-techniques-for-efficient-web-development",
-                    "Tags": [ "Javascript", "Web Development", "Other" ],
-                    "Status": "Published",
-                    "PublishedAt": "2024-06-11T15:04:05.641Z",
-                    "Order": 5,
-                    "FeaturedImage": "/files/contents/javascript.jpg"
+                    "FeaturedImage": "/files/img/photos/b7.jpg"
                 }
             ]
         },
@@ -1243,20 +1253,20 @@
                     }
                 },
                 {
-                    "Name": "technologies",
+                    "Name": "customer",
                     "Description": "List of technologies used in the project",
                     "Type": "string",
                     "Required": true,
                     "Unique": false,
-                    "Label": "Technologies",
+                    "Label": "Customer",
                     "Settings": {
-                        "Placeholder": "Enter name of technologies used in the project",
+                        "Placeholder": "Enter name of customer of project",
                         "DataTableColumnOrder": 2,
                         "DataTableVisible": true,
                         "DataTableViewComponent": "StringFieldDataTableView",
                         "FormViewOrder": 6,
-                        "FormColWidth": 12,
-                        "FormViewComponent": "StringFieldFormTextArea"
+                        "FormColWidth": 6,
+                        "FormViewComponent": "StringFieldFormText"
                     }
                 },
                 {
@@ -1295,58 +1305,59 @@
             ],
             "Contents": [
                 {
-                    "project_title": "Personal Portfolio Website",
-                    "description": "A personal website showcasing my portfolio, blog, and contact information.",
+                    "project_title": "Cras Fermentum Sem",
+                    "description": "Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum",
                     "start_date": "2023-01-15",
                     "end_date": "2023-03-10",
-                    "technologies": "HTML, CSS, JavaScript, Tailwind CSS",
+                    "customer": "Cool House",
                     "project_url": "https://portfolio.example.com",
-                    "image": "/files/contents/portfolio.png"
+                    "image": "/files/img/photos/cs16.jpg"
                 },
                 {
-                    "project_title": "E-commerce Platform",
-                    "description": "An e-commerce platform with a fully functional product listing, cart, and checkout system.",
+                    "project_title": "Mollis Ipsum Mattis",
+                    "description": "Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum",
                     "start_date": "2022-05-01",
                     "end_date": "2022-07-20",
-                    "technologies": "React,Node.js,MongoDB,Stripe API",
+                    "customer": "Nik House",
                     "project_url": "https://ecommerce.example.com",
-                    "image": "/files/contents/commerce.png"
+                    "image": "/files/img/photos/cs17.jpg"
                 },
                 {
-                    "project_title": "Task Management App",
-                    "description": "A mobile-friendly task management application with features like task assignment and deadlines.",
-                    "start_date": "2022-08-10",
-                    "end_date": "2022-10-05",
-                    "technologies": "Vue.js, Firebase, Tailwind CSS",
-                    "project_url": "https://taskmanager.example.com",
-                    "image": "/files/contents/task.png"
-                },
-                {
-                    "project_title": "Social Media Dashboard",
-                    "description": "A dashboard that aggregates social media analytics from platforms like Twitter, Facebook, and Instagram.",
+                    "project_title": "Ipsum Ultricies Cursus",
+                    "description": "Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum",
                     "start_date": "2023-02-01",
                     "end_date": "2023-04-15",
-                    "technologies": "Next.js, Node.js, Chart.js, API Integrations",
+                    "customer": "Petros House",
                     "project_url": "https://socialdashboard.example.com",
-                    "image": "/files/contents/dashboard.png"
+                    "image": "/files/img/photos/cs18.jpg"
                 },
                 {
-                    "project_title": "Blog Platform",
-                    "description": "A blog platform with rich text editing, category management, and SEO optimizations.",
+                    "project_title": "Sollicitudin Ornare Porta",
+                    "description": "Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum",
                     "start_date": "2021-11-01",
                     "end_date": "2022-01-15",
-                    "technologies": "WordPress, PHP, MySQL",
+                    "customer": "Kostas House",
                     "project_url": "https://blogplatform.example.com",
-                    "image": "/files/contents/blog.png"
+                    "image": "/files/img/photos/cs19.jpg"
                 },
                 {
-                    "project_title": "Real Estate Listing Website",
-                    "description": "A website for real estate agencies to list properties with interactive maps and contact features.",
+                    "project_title": "Ipsum Mollis Vulputate",
+                    "description": "Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum",
                     "start_date": "2022-09-05",
                     "end_date": "2022-11-20",
-                    "technologies": "Laravel , Vue.js, Leaflet.js",
+                    "customer": "Laravel House",
                     "project_url": "https://realestate.example.com",
-                    "image": "/files/contents/real-estate.png"
+                    "image": "/files/img/photos/cs20.jpg"
+
+                },
+                {
+                    "project_title": "Inceptos Euismod Egestas",
+                    "description": "Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum",
+                    "start_date": "2022-09-05",
+                    "end_date": "2022-11-20",
+                    "customer": "Egestas House",
+                    "project_url": "https://realestate.example.com",
+                    "image": "/files/img/photos/cs21.jpg"
 
                 }
             ]
