@@ -103,8 +103,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCMS.Repositories.EFCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCMS.Web.UI.TailwindStyleBuilder", "Frontend\FluentCMS.Web.UI.TailwindStyleBuilder\FluentCMS.Web.UI.TailwindStyleBuilder.csproj", "{9A614AAB-D386-4D5F-971B-33BA9E820AF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZenzeCMS", "ZenzeCMS\ZenzeCMS.csproj", "{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -267,10 +265,6 @@ Global
 		{9A614AAB-D386-4D5F-971B-33BA9E820AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A614AAB-D386-4D5F-971B-33BA9E820AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A614AAB-D386-4D5F-971B-33BA9E820AF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF7F3CB6-9EF4-46E7-A1F0-9B3FB80010C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
