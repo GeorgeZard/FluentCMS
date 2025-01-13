@@ -4,3 +4,5 @@
 
 /.vs
 src/FluentCMS/temp
+/src/ZenzeCMS/files
+/src/FluentCMS/tailwind.extension.json
