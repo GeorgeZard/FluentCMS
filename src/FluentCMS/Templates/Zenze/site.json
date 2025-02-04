@@ -997,6 +997,16 @@
             "Name": "Compare",
             "Category": "Subscription",
             "Description": "Compare Plans"
+        },
+        {
+            "Name": "Team1",
+            "Category": "Team",
+            "Description": "Simple form with four team elements and header"
+        },
+        {
+            "Name": "Team2",
+            "Category": "Team",
+            "Description": "Simple form with three team elements and left paragraph"
         }
     ],
     "ContentTypes": [
