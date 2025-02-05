@@ -623,6 +623,11 @@
             "Category": "Hero",
             "Description": "Default Hero for business companies"
         },
+        {
+            "Name": "AppHero",
+            "Category": "Hero",
+            "Description": "App Hero with playstore and appstore buttons"
+        },
 
         {
             "Name": "DefaultVideo",
