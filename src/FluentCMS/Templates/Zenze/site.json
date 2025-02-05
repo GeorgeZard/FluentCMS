@@ -623,150 +623,11 @@
             "Category": "Hero",
             "Description": "Default Hero for business companies"
         },
+        
         {
-            "Name": "Hero2",
+            "Name": "DefaultVideo",
             "Category": "Hero",
-            "Description": "Hero2 for business companies"
-        },
-        {
-            "Name": "Hero3",
-            "Category": "Hero",
-            "Description": "Hero3 for business companies"
-        },
-        {
-            "Name": "Hero4",
-            "Category": "Hero",
-            "Description": "Hero4 for business companies"
-        },
-        {
-            "Name": "Hero5",
-            "Category": "Hero",
-            "Description": "Hero5 for business companies"
-        },
-        {
-            "Name": "Hero6",
-            "Category": "Hero",
-            "Description": "Hero6 for business companies"
-        },
-        {
-            "Name": "Hero7",
-            "Category": "Hero",
-            "Description": "Hero7 for business companies"
-        },
-        {
-            "Name": "Hero8",
-            "Category": "Hero",
-            "Description": "Hero8 for business companies"
-        },
-        {
-            "Name": "Hero9",
-            "Category": "Hero",
-            "Description": "Hero9 for business companies"
-        },
-        {
-            "Name": "Hero10",
-            "Category": "Hero",
-            "Description": "Hero10 for business companies"
-        },
-        {
-            "Name": "Hero12",
-            "Category": "Hero",
-            "Description": "Hero12 for business companies"
-        },
-        {
-            "Name": "Hero13",
-            "Category": "Hero",
-            "Description": "Hero13 for business companies"
-        },
-        {
-            "Name": "Hero14",
-            "Category": "Hero",
-            "Description": "Hero14 for business companies"
-        },
-        {
-            "Name": "Hero15",
-            "Category": "Hero",
-            "Description": "Hero15 for business companies"
-        },
-        {
-            "Name": "Hero16",
-            "Category": "Hero",
-            "Description": "Hero16 for business companies"
-        },
-        {
-            "Name": "Hero17",
-            "Category": "Hero",
-            "Description": "Hero17 for business companies"
-        },
-        {
-            "Name": "Hero18",
-            "Category": "Hero",
-            "Description": "Hero18 for business companies"
-        },
-        {
-            "Name": "Hero19",
-            "Category": "Hero",
-            "Description": "Hero19 for business companies"
-        },
-        {
-            "Name": "Hero20",
-            "Category": "Hero",
-            "Description": "Hero20 for business companies"
-        },
-        {
-            "Name": "Hero21",
-            "Category": "Hero",
-            "Description": "Hero21 for business companies"
-        },
-        {
-            "Name": "Hero22",
-            "Category": "Hero",
-            "Description": "Hero22 for business companies"
-        },
-        {
-            "Name": "Hero23",
-            "Category": "Hero",
-            "Description": "Hero23 for business companies"
-        },
-        {
-            "Name": "Hero24",
-            "Category": "Hero",
-            "Description": "Hero24 for business companies"
-        },
-        {
-            "Name": "Hero25",
-            "Category": "Hero",
-            "Description": "Hero25 for business companies"
-        },
-        {
-            "Name": "Hero26",
-            "Category": "Hero",
-            "Description": "Hero26 for business companies"
-        },
-        {
-            "Name": "Hero27",
-            "Category": "Hero",
-            "Description": "Hero27 for business companies"
-        },
-        {
-            "Name": "Hero28",
-            "Category": "Hero",
-            "Description": "Hero28 for business companies"
-        },
-        {
-            "Name": "Hero29",
-            "Category": "Hero",
-            "Description": "Hero29 for business companies"
-        },
-        {
-            "Name": "Hero30",
-            "Category": "Hero",
-            "Description": "Hero30 for business companies"
-        },
-        {
-            "Name": "HeroSwiper",
-            "Category": "Hero",
-            "Description": "Swiper Hero section"
+            "Description": "Default Hero with video"
         },
         {
             "Name": "Default",
@@ -778,11 +639,7 @@
             "Category": "Header",
             "Description": "Dark Header"
         },
-        {
-            "Name": "HeaderBlue",
-            "Category": "Header",
-            "Description": "Blue Header"
-        },
+        
         {
             "Name": "HeaderCenterLight",
             "Category": "Header",
@@ -792,16 +649,6 @@
             "Name": "HeaderCenterDark",
             "Category": "Header",
             "Description": "Header with logo in center with dark color"
-        },
-        {
-            "Name": "HeaderCenterFancy",
-            "Category": "Header",
-            "Description": "Header with logo in center with fancy mode"
-        },
-        {
-            "Name": "HeaderHovering",
-            "Category": "Header",
-            "Description": "Header with logo in center with extended mode"
         },
         {
             "Name": "AboutMe",
@@ -922,12 +769,7 @@
             "Name": "Fact4",
             "Category": "Facts",
             "Description": "Company Fact 4"
-        },
-        {
-            "Name": "Fact5",
-            "Category": "Facts",
-            "Description": "Company Fact 5"
-        },
+        },      
         {
             "Name": "Fact6",
             "Category": "Facts",
@@ -942,11 +784,6 @@
             "Name": "Fact8",
             "Category": "Facts",
             "Description": "Company Fact 8"
-        },
-        {
-            "Name": "Default",
-            "Category": "Clients",
-            "Description": "Default our client section"
         },
         {
             "Name": "Trusted",
@@ -968,18 +805,9 @@
             "Category": "Footer",
             "Description": "Default footer section"
         },
+        
         {
-            "Name": "FooterBlack",
-            "Category": "Footer",
-            "Description": "Default footer black section"
-        },
-        {
-            "Name": "FooterBlue",
-            "Category": "Footer",
-            "Description": "Default footer blue section"
-        },
-        {
-            "Name": "FooterWhite",
+            "Name": "DefaultWhite",
             "Category": "Footer",
             "Description": "Default footer white section"
         },
@@ -1018,21 +846,13 @@
             "Category": "Features",
             "Description": "Button Features"
         },
-        {
-            "Name": "CorporateFeatures",
-            "Category": "Features",
-            "Description": "Corporate Features"
-        },
+        
         {
             "Name": "MaterialFeatures",
             "Category": "Features",
             "Description": "Material UI Features"
         },
-        {
-            "Name": "BarsFeatures",
-            "Category": "Features",
-            "Description": "Progress Bar UI Features"
-        },
+       
         {
             "Name": "ListFeatures",
             "Category": "Features",
