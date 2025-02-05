@@ -1,5 +1,5 @@
 {{ for item in Items }}
-    <a href="/blogs/detail/{{ item.Id }}" class="blog-post border border-border-muted flex flex-wrap mb-8 p-4 bg-surface-accent shadow rounded-lg">
+    <a href="/blog/detail/{{ item.Id }}" class="blog-post border border-border-muted flex flex-wrap mb-8 p-4 bg-surface-accent shadow rounded-lg">
         {{ if item.FeaturedImage }}
         <div class="blog-featured-image w-32 h-32 flex-shrink-0 mr-4">
             <img class="w-full h-full object-cover rounded-lg" src="/files/{{ item.FeaturedImage }}" alt="Featured Image">

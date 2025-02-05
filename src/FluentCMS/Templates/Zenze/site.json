@@ -70,7 +70,40 @@
             "Settings": {
                 "Index": "true",
                 "Follow": "true"
-            }
+            },
+            "Plugins": [
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "ContentPath": "000.html"
+                },
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "ContentPath": "001.html"
+                },
+                {
+                    "Definition": "Content List",
+                    "Section": "Main",
+                    "Settings": {
+                        "Template": "002.sbn",
+                        "ContentTypeSlug": "project"
+                    }
+                },
+                {
+                    "Definition": "Content List",
+                    "Section": "Main",
+                    "Settings": {
+                        "Template": "003.sbn",
+                        "ContentTypeSlug": "blog"
+                    }
+                },
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "ContentPath": "004.html"
+                }
+            ]
         },
         {
             "Title": "Contact",
@@ -90,7 +123,14 @@
             "Settings": {
                 "Index": "true",
                 "Follow": "true"
-            }
+            },
+            "Plugins": [
+                {
+                    "Definition": "TextHTML Plugin",
+                    "Section": "Main",
+                    "ContentPath": "terms.html"
+                }
+            ]
         },
         {
             "Title": "About",
@@ -115,16 +155,6 @@
         {
             "Title": "Portfolio",
             "Path": "/portfolio",
-            "EditLayout": "EditLayout",
-            "ViewRoles": [ "All Users" ],
-            "Settings": {
-                "Index": "true",
-                "Follow": "true"
-            }
-        },
-        {
-            "Title": "Privacy",
-            "Path": "/privacy",
             "EditLayout": "EditLayout",
             "ViewRoles": [ "All Users" ],
             "Settings": {
