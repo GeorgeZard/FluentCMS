@@ -94,7 +94,27 @@
         },
         {
             "Title": "About",
-            "Path": "/about",
+            "Path": "/aboutus",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            }
+        },
+        {
+            "Title": "Frequently Asked Questions",
+            "Path": "/faq",
+            "EditLayout": "EditLayout",
+            "ViewRoles": [ "All Users" ],
+            "Settings": {
+                "Index": "true",
+                "Follow": "true"
+            }
+        },
+        {
+            "Title": "Portfolio",
+            "Path": "/portfolio",
             "EditLayout": "EditLayout",
             "ViewRoles": [ "All Users" ],
             "Settings": {
@@ -113,8 +133,8 @@
             }
         },
         {
-            "Title": "Blogs",
-            "Path": "/blogs",
+            "Title": "Blog",
+            "Path": "/blog",
             "Layout": "SingleLayout",
             "EditLayout": "EditLayout",
             "ViewRoles": [ "All Users" ],
@@ -714,6 +734,11 @@
             "Description": "Hero30 for business companies"
         },
         {
+            "Name": "HeroSwiper",
+            "Category": "Hero",
+            "Description": "Swiper Hero section"
+        },
+        {
             "Name": "Default",
             "Category": "Header",
             "Description": "Default Header 1"
@@ -742,6 +767,11 @@
             "Name": "HeaderCenterFancy",
             "Category": "Header",
             "Description": "Header with logo in center with fancy mode"
+        },
+        {
+            "Name": "HeaderHovering",
+            "Category": "Header",
+            "Description": "Header with logo in center with extended mode"
         },
         {
             "Name": "AboutMe",
