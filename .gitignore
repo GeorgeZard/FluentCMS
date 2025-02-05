@@ -16,3 +16,4 @@ src/FluentCMS/temp
 /src/FluentCMS/fluentcms.db
 /src/FluentCMS/zenzecms-log.db
 /src/FluentCMS/zenzecms.db
+/src/FluentCMS/appsettings.json
