@@ -947,7 +947,43 @@
             "Name": "WorkingSteps",
             "Category": "Process",
             "Description": "Three working steps to organize a business model"
+        },
+        {
+            "Name": "ColorLayout",
+            "Category": "Testimonials",
+            "Description": "Reviews with background color"
+        },
+        {
+            "Name": "Default",
+            "Category": "Testimonials",
+            "Description": "Default layout for testimonials"
+        },
+        {
+            "Name": "DetailLayout",
+            "Category": "Testimonials",
+            "Description": "Default layout for testimonials"
+        },
+        {
+            "Name": "HeaderLayout",
+            "Category": "Testimonials",
+            "Description": "Reviews with header paragraph on top"
+        },
+        {
+            "Name": "MansoryLayout",
+            "Category": "Testimonials",
+            "Description": "Reviews displayed in mansorys layout"
+        },
+        {
+            "Name": "SingleLayout",
+            "Category": "Testimonials",
+            "Description": "Single review layout"
+        },
+        {
+            "Name": "SingleLeftLayout",
+            "Category": "Testimonials",
+            "Description": "Single review layout with picture in left side"
         }
+
     ],
     "ContentTypes": [
         {
