@@ -623,7 +623,7 @@
             "Category": "Hero",
             "Description": "Default Hero for business companies"
         },
-        
+
         {
             "Name": "DefaultVideo",
             "Category": "Hero",
@@ -639,7 +639,7 @@
             "Category": "Header",
             "Description": "Dark Header"
         },
-        
+
         {
             "Name": "HeaderCenterLight",
             "Category": "Header",
@@ -769,7 +769,7 @@
             "Name": "Fact4",
             "Category": "Facts",
             "Description": "Company Fact 4"
-        },      
+        },
         {
             "Name": "Fact6",
             "Category": "Facts",
@@ -805,7 +805,7 @@
             "Category": "Footer",
             "Description": "Default footer section"
         },
-        
+
         {
             "Name": "DefaultWhite",
             "Category": "Footer",
@@ -846,13 +846,13 @@
             "Category": "Features",
             "Description": "Button Features"
         },
-        
+
         {
             "Name": "MaterialFeatures",
             "Category": "Features",
             "Description": "Material UI Features"
         },
-       
+
         {
             "Name": "ListFeatures",
             "Category": "Features",
@@ -887,6 +887,66 @@
             "Name": "Team2",
             "Category": "Team",
             "Description": "Simple form with three team elements and left paragraph"
+        },
+        {
+            "Name": "Default",
+            "Category": "Contact",
+            "Description": "Default contact form"
+        },
+        {
+            "Name": "LetsTalk",
+            "Category": "Contact",
+            "Description": "Contact form with picture"
+        },
+        {
+            "Name": "Convinced",
+            "Category": "Contact",
+            "Description": "Contact form with convinced question"
+        },
+        {
+            "Name": "ContactWithTrusted",
+            "Category": "Contact",
+            "Description": "Contact form with trusted customers"
+        },
+        {
+            "Name": "ContactWithMap",
+            "Category": "Contact",
+            "Description": "Contact form with map in left side"
+        },
+        {
+            "Name": "AppStep",
+            "Category": "Process",
+            "Description": "Steps how download an app"
+        },
+        {
+            "Name": "BusinessSteps",
+            "Category": "Process",
+            "Description": "Steps how create a business model"
+        },
+        {
+            "Name": "BusinessStepsParagraph",
+            "Category": "Process",
+            "Description": "Steps how create a business model with paragraph"
+        },
+        {
+            "Name": "Default",
+            "Category": "Process",
+            "Description": "Three working steps with image in left side"
+        },
+        {
+            "Name": "HowDoIt",
+            "Category": "Process",
+            "Description": "How we do it explaination"
+        },
+        {
+            "Name": "VideoProcess",
+            "Category": "Process",
+            "Description": "How create a business model with video in top"
+        },
+        {
+            "Name": "WorkingSteps",
+            "Category": "Process",
+            "Description": "Three working steps to organize a business model"
         }
     ],
     "ContentTypes": [
