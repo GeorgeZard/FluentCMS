@@ -1,5 +1,6 @@
 (function () {
-'use strict';
+    'use strict';
+    let themeInstance = null;
 var theme = {
   /**
    * Theme's components/functions list
@@ -7,6 +8,9 @@ var theme = {
    * Some components have dependencies (plugins).
    * Do not forget to remove dependency from src/js/vendor/ and recompile.
    */
+    destroy: function () {
+        themeInstance = null;
+    },
   init: function () {
     theme.stickyHeader();
     theme.subMenu();
@@ -912,6 +916,28 @@ var theme = {
       }, 2300);
     });
   },
-}
-    theme.init();
+    }
+
+    window.addEventListener('fluentcms:beforeenhanced', () => {
+        if (themeInstance) {
+            themeInstance.destroy();
+        }
+    });
+
+    window.addEventListener('fluentcms:afterenhanced', () => {
+
+        themeInstance = theme;
+        if (themeInstance) {
+            themeInstance.init();
+        }
+    });
+
+    window.addEventListener('fluentcms:init', () => {
+
+        themeInstance = theme;
+        if (themeInstance) {
+            themeInstance.init();
+        }
+    });
+    
 })();
