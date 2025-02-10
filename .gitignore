@@ -17,4 +17,6 @@ src/FluentCMS/temp
 /src/FluentCMS/zenzecms-log.db
 /src/FluentCMS/zenzecms.db
 /src/FluentCMS/appsettings.json
+/src/FluentCMS/zenzencms-log.db
+/src/FluentCMS/zenzencms.db
 /src/FluentCMS/tailwind.extension.json
