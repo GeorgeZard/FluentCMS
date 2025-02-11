@@ -869,6 +869,11 @@
             "Description": "Canvas List Features"
         },
         {
+            "Name": "TileFeatures",
+            "Category": "Features",
+            "Description": "Tiles List Features"
+        },
+        {
             "Name": "Default",
             "Category": "Subscription",
             "Description": "3 Simple Plans"
