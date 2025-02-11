@@ -869,9 +869,24 @@
             "Description": "Canvas List Features"
         },
         {
+            "Name": "PhotoAlbumFeatures",
+            "Category": "Features",
+            "Description": "Album List Features"
+        },
+        {
+            "Name": "PortraitFeatures",
+            "Category": "Features",
+            "Description": "Portrait List Features"
+        },
+        {
             "Name": "TileFeatures",
             "Category": "Features",
             "Description": "Tiles List Features"
+        },
+        {
+            "Name": "ExpertiseFeatures",
+            "Category": "Features",
+            "Description": "Expertise List Features"
         },
         {
             "Name": "Default",
